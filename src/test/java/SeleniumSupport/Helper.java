@@ -1,5 +1,10 @@
 package SeleniumSupport;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -17,6 +22,9 @@ public class Helper extends Locators{
 		jsx = (JavascriptExecutor) driver;
 	}
 	
+	public void GetURL() {
+		driver.get(url);
+	}
 	public void Click_JavaScriptAlerts() {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(JavaScriptAlerts))).click();
 	}

@@ -12,7 +12,7 @@ public class WebTest {
 	@BeforeTest
 	public void InitializeBrowser() {
 		driver = new ChromeDriver();
-		driver.get("http://the-internet.herokuapp.com/");
+		new Helper(driver).GetURL();
 	}
 	
 	@Test
